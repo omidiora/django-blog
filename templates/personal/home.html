@@ -1,0 +1,16 @@
+  {% extends 'base.html' %}
+
+
+  
+  {% block content %}
+
+  <h1>Registered User:</h1>
+
+  
+  {% for account in accounts  %}
+   <p> {{account}}</p>
+  {% endfor %}
+    
+      
+  {% endblock content %}
+      
