@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>This is te</title>
-</head>
-<body>
-    {% if request.user.is_authenticated %}
-     <p>  <a href="{% url 'home' %}">Home</a></p>  <p>Hello , {{request.user.username}}  |   <a href="{% url 'logout' %}">Logout</a></p>
-    {% else %}
-    <p><a href="{% url 'register' %}">Register</a> |  <a href="">Login</a> </p>
-    {% endif %}
+    {% include 'snippets/header.html' %} 
     
     {% block content %}
         
     {% endblock content %}
         
+        
+    {% include 'snippets/footer.html' %}
 </body>
 </html>
